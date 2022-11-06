@@ -20,13 +20,13 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/Srivatsav-K/fav-npm-packages.git
+  git clone https://github.com/SunkaraNaveenKumar/nmp-package-favorite.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd fav-npm-packages
+  cd npm-packages
 ```
 
 Install dependencies
