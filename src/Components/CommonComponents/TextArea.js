@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{memo} from 'react'
 
-const TextArea = () => {
+const TextArea = ({description,handleDescription}) => {
+  console.log("TextArea")
   return (
-    <div>TextArea</div>
+    <textarea  className='border-2 border-solid border-black w-full' rows="7" cols="50" value={description} onChange={(e)=>{handleDescription(e)}}></textarea>
   )
 }
 
-export default TextArea
+export default memo(TextArea)
