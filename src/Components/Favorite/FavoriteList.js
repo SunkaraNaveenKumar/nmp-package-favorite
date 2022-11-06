@@ -2,23 +2,23 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import swal from 'sweetalert';
-const FavoriteList = ({ favList,handleDeletePackage }) => {
+const FavoriteList = ({ favList, handleDeletePackage }) => {
     console.log("FavoriteList");
-    const handleAlert = (val)=>{
+    const handleAlert = (val) => {
         swal({
             title: "Are you sure?",
             text: "Once deleted, you will not be able to recover this imaginary file!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
-          })
-          .then((willDelete) => {
-            if (willDelete) {
-             handleDeletePackage(val)
-            } else {
-              swal("Your package file is safe!");
-            }
-          });
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    handleDeletePackage(val)
+                } else {
+                    swal("Your package file is safe!");
+                }
+            });
     }
     return (
         <div className='mt-20'>
@@ -31,11 +31,11 @@ const FavoriteList = ({ favList,handleDeletePackage }) => {
                 </thead>
                 <tbody>
                     {favList.map((item) => {
-                        const {name,date} =item.package
+                        const { name, date } = item.package
                         return (
                             <tr key={date}>
                                 <td className='border border-slate-300'>{name}</td>
-                                <td className='border border-slate-300 pl-4'><FontAwesomeIcon icon={faTrash} onClick={()=>{handleAlert(date)}}/></td>
+                                <td className='border border-slate-300 pl-4'><FontAwesomeIcon icon={faTrash} onClick={() => { handleAlert(date) }} /></td>
                             </tr>
                         )
                     })}

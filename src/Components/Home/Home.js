@@ -32,19 +32,19 @@ const Home = () => {
     const { value } = e.target
     setSearchText(value)
     setIsPending(true)
-    timeout.current=setTimeout(()=>{
+    timeout.current = setTimeout(() => {
       axios.get(`https://api.npms.io/v2/search?q=${value}`)
-      .then((response) => {
-        const { results: packagesData } = response?.data
-        setPackagesList(packagesData)
-        window.localStorage.setItem("packages", JSON.stringify(packagesData))
-        setIsPending(false)
-      }).catch((err) => {
-        console.log("error:", err.message)
-        setIsPending(false)
-      })
-    },500)
-  },[searchText])
+        .then((response) => {
+          const { results: packagesData } = response?.data
+          setPackagesList(packagesData)
+          window.localStorage.setItem("packages", JSON.stringify(packagesData))
+          setIsPending(false)
+        }).catch((err) => {
+          console.log("error:", err.message)
+          setIsPending(false)
+        })
+    }, 500)
+  }, [searchText])
 
   const handleError = () => {
     const toggle = localStorageFavorite.some((item) => {
