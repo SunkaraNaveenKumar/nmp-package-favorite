@@ -7,16 +7,16 @@ const NavigationBar = () => {
     <>
       <div className='flex flex-row justify-end bg-pink-500 p-5 mb-5'>
         <div className='ml-5 bg-blue-300 rounded'>
-          <Link to="/">Home</Link> 
+          <Link to="/">Home</Link>
         </div>
         <div className='ml-5 bg-blue-300 rounded'>
-          <Link to="/favorite">Favorite</Link>
+          <Link to="/searchpackage">Add package</Link>
         </div>
       </div>
 
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/favorite' element={<Favorite />}></Route>
+        <Route path='/' element={<Favorite />}></Route>
+        <Route path='/searchpackage' element={<Home />}></Route>
       </Routes>
     </>
   )
