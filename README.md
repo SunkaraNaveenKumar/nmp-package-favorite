@@ -1,5 +1,5 @@
 # NPM packages manager
-[Live Link](https://srivatsav-fav-npm-packages.netlify.app/)
+[Live Link](https://npm-packages-fav.netlify.app/)
 
 ## Features of the Tool
 - One can search for the required npm package.
